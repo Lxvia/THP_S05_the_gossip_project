@@ -1,5 +1,13 @@
-class GossipController < sinatra::Base
-    get '/gossips/new/' do
-        erb :new_gossip
+require 'pry'
+
+class Gossip
+
+    def save
+        CSV.open("./db/gossip.csv", "ab") do |csv|
+            csv << ["Mon super auteur", "Ma super description"]
+        end
     end
+
+    binding.pry
+    
 end
