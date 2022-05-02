@@ -1,4 +1,5 @@
 require 'gossip'
+require 'csv'
 
 class ApplicationController < Sinatra::Base
     get '/' do
